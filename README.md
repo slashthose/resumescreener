@@ -13,6 +13,11 @@
 
 ---
 
+[![Live Demo](https://img.shields.io/badge/demo-live_deployment-teal?style=for-the-badge&logo=vercel)](https://resumescreener-mu.vercel.app/)
+
+---
+
+
 ## Table of Contents
 
 - [About](#about)
