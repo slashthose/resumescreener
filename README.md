@@ -14,7 +14,7 @@
 
 ---
 
-[![Deployment](https://img.shields.io/badge/⚡_Live_Desk-Open_App-black?style=for-the-badge)](resumescreener-mu.vercel.app/)
+[![Deployment](https://img.shields.io/badge/⚡_Live_Desk-Open_App-black?style=for-the-badge)](https://resumescreener-mu.vercel.app/)
 
 ---
 
@@ -50,7 +50,7 @@
 
 **Project type:** Full-Stack AI Web App
 **Status:** 🚧 In Development
-**Live demo:** [resumescreener-mu.vercel.app](resumescreener-mu.vercel.app/)
+**Live demo:** [resumescreener-mu.vercel.app](https://resumescreener-mu.vercel.app/)
 
 ---
 
