@@ -34,21 +34,10 @@
         color: var(--linen);
         background-color: var(--graphite);
         background-image:
-          radial-gradient(
-            circle at 15% 20%,
-            rgba(255, 255, 255, 0.035) 0,
-            transparent 45%
-          ),
-          radial-gradient(
-            circle at 85% 75%,
-            rgba(255, 255, 255, 0.03) 0,
-            transparent 40%
-          ),
-          radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-        background-size:
-          auto,
-          auto,
-          4px 4px;
+          radial-gradient(circle at 15% 20%, rgba(255,255,255,0.035) 0, transparent 45%),
+          radial-gradient(circle at 85% 75%, rgba(255,255,255,0.03) 0, transparent 40%),
+          radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+        background-size: auto, auto, 4px 4px;
         padding: clamp(1.25rem, 4vw, 3rem);
       }
 
@@ -133,34 +122,10 @@
       }
       .torn-top {
         clip-path: polygon(
-          0% 6px,
-          3% 0,
-          7% 5px,
-          11% 1px,
-          15% 6px,
-          19% 0,
-          23% 5px,
-          27% 1px,
-          31% 6px,
-          35% 0,
-          39% 5px,
-          43% 1px,
-          47% 6px,
-          51% 0,
-          55% 5px,
-          59% 1px,
-          63% 6px,
-          67% 0,
-          71% 5px,
-          75% 1px,
-          79% 6px,
-          83% 0,
-          87% 5px,
-          91% 1px,
-          95% 6px,
-          100% 0,
-          100% 100%,
-          0 100%
+          0% 6px, 3% 0, 7% 5px, 11% 1px, 15% 6px, 19% 0, 23% 5px, 27% 1px,
+          31% 6px, 35% 0, 39% 5px, 43% 1px, 47% 6px, 51% 0, 55% 5px, 59% 1px,
+          63% 6px, 67% 0, 71% 5px, 75% 1px, 79% 6px, 83% 0, 87% 5px, 91% 1px,
+          95% 6px, 100% 0, 100% 100%, 0 100%
         );
       }
 
@@ -243,9 +208,7 @@
         text-align: center;
         font-size: 0.85rem;
         color: var(--graphite-soft);
-        transition:
-          border-color 0.15s ease,
-          background 0.15s ease;
+        transition: border-color 0.15s ease, background 0.15s ease;
       }
       .file-drop:hover,
       .file-drop.dragover {
@@ -282,9 +245,7 @@
         gap: 0.6rem;
         transform: rotate(0.6deg);
         box-shadow: 0 6px 0 rgba(75, 143, 140, 0.6);
-        transition:
-          transform 0.08s ease,
-          box-shadow 0.08s ease;
+        transition: transform 0.08s ease, box-shadow 0.08s ease;
       }
       .sticker-btn:hover:not(:disabled) {
         transform: translateY(-2px) rotate(0.6deg);
@@ -316,12 +277,8 @@
         box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
         position: relative;
       }
-      .note.n1 {
-        transform: rotate(1.5deg);
-      }
-      .note.n2 {
-        transform: rotate(-1deg);
-      }
+      .note.n1 { transform: rotate(1.5deg); }
+      .note.n2 { transform: rotate(-1deg); }
       .note strong {
         display: block;
         font-family: var(--font-display);
@@ -375,9 +332,7 @@
         animation: spin 0.9s linear infinite;
       }
       @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
+        to { transform: rotate(360deg); }
       }
       .loading-card p {
         margin: 0.2rem 0;
@@ -398,21 +353,11 @@
         animation: dropIn 0.4s ease both;
       }
       @keyframes dropIn {
-        from {
-          opacity: 0;
-          transform: translateY(10px) rotate(0deg);
-        }
-        to {
-          opacity: 1;
-          transform: none;
-        }
+        from { opacity: 0; transform: translateY(10px) rotate(0deg); }
+        to { opacity: 1; transform: none; }
       }
-      .result-card:nth-child(odd) {
-        transform: rotate(-0.8deg);
-      }
-      .result-card:nth-child(even) {
-        transform: rotate(0.8deg);
-      }
+      .result-card:nth-child(odd) { transform: rotate(-0.8deg); }
+      .result-card:nth-child(even) { transform: rotate(0.8deg); }
       .result-card .tape {
         top: -12px;
         right: 34px;
@@ -489,19 +434,10 @@
         border-radius: 3px;
         transform: rotate(-3deg);
       }
-      .verdict-stamp.strong {
-        color: var(--cyan);
-      }
-      .verdict-stamp.moderate {
-        color: var(--teal);
-      }
-      .verdict-stamp.weak {
-        color: var(--taupe);
-      }
-      .verdict-stamp.error {
-        color: var(--graphite);
-        border-style: dashed;
-      }
+      .verdict-stamp.strong { color: var(--cyan); }
+      .verdict-stamp.moderate { color: var(--teal); }
+      .verdict-stamp.weak { color: var(--taupe); }
+      .verdict-stamp.error { color: var(--graphite); border-style: dashed; }
 
       .summary-text {
         font-size: 0.9rem;
@@ -522,9 +458,7 @@
         border-top: 1px solid rgba(48, 48, 54, 0.1);
       }
       @media (max-width: 480px) {
-        .skills-grid {
-          grid-template-columns: 1fr;
-        }
+        .skills-grid { grid-template-columns: 1fr; }
       }
       .skills-col h4 {
         font-family: var(--font-display);
@@ -533,12 +467,8 @@
         text-transform: uppercase;
         margin: 0 0 0.45rem;
       }
-      .skills-col.match h4 {
-        color: var(--cyan);
-      }
-      .skills-col.miss h4 {
-        color: var(--taupe);
-      }
+      .skills-col.match h4 { color: var(--cyan); }
+      .skills-col.miss h4 { color: var(--taupe); }
       .chip-row {
         display: flex;
         flex-wrap: wrap;
@@ -642,15 +572,9 @@
         position: relative;
         background-color: var(--graphite);
         background-image:
-          radial-gradient(
-            circle at 20% 15%,
-            rgba(255, 255, 255, 0.04) 0,
-            transparent 45%
-          ),
+          radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.04) 0, transparent 45%),
           radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-        background-size:
-          auto,
-          4px 4px;
+        background-size: auto, 4px 4px;
         padding: 3rem 2.75rem;
         display: flex;
         flex-direction: column;
@@ -696,18 +620,9 @@
       .stack-item + .stack-item {
         margin-top: -2.5rem;
       }
-      .stack-item:nth-child(1) {
-        transform: rotate(-5deg);
-        border-left-color: var(--taupe);
-      }
-      .stack-item:nth-child(2) {
-        transform: rotate(3deg);
-        border-left-color: var(--teal);
-      }
-      .stack-item:nth-child(3) {
-        transform: rotate(-2deg);
-        border-left-color: var(--cyan);
-      }
+      .stack-item:nth-child(1) { transform: rotate(-5deg); border-left-color: var(--taupe); }
+      .stack-item:nth-child(2) { transform: rotate(3deg); border-left-color: var(--teal); }
+      .stack-item:nth-child(3) { transform: rotate(-2deg); border-left-color: var(--cyan); }
       .stack-item.topmost {
         transform: rotate(4deg);
         border-left-color: var(--cyan);
@@ -765,7 +680,7 @@
         max-width: 1000px;
         margin: 0 auto 1rem;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: center;
         gap: 0.9rem;
         font-size: 0.82rem;
@@ -790,6 +705,27 @@
         color: var(--cyan);
       }
 
+      .history-btn {
+        font-family: var(--font-display);
+        font-size: 0.85rem;
+        letter-spacing: 0.03em;
+        color: var(--graphite);
+        background: var(--linen-soft);
+        border: none;
+        border-radius: 3px;
+        padding: 0.8rem 1.2rem;
+        cursor: pointer;
+        text-align: center;
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+        transform: rotate(-1deg);
+        transition: transform 0.08s ease, box-shadow 0.08s ease;
+      }
+      .history-btn:hover {
+        transform: translateY(-2px) rotate(-1deg);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.32);
+        color: var(--cyan);
+      }
+
       .history-card {
         background: var(--linen-soft);
         color: var(--graphite);
@@ -806,9 +742,7 @@
         gap: 1rem;
         list-style: none;
       }
-      .history-card summary::-webkit-details-marker {
-        display: none;
-      }
+      .history-card summary::-webkit-details-marker { display: none; }
       .history-jd-preview {
         font-weight: 400;
         opacity: 0.6;
@@ -831,14 +765,11 @@
         font-size: 0.85rem;
       }
 
-      .hidden {
-        display: none !important;
-      }
+      .hidden { display: none !important; }
+
 
       @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
+        *, *::before, *::after {
           animation-duration: 0.001ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.001ms !important;
@@ -852,28 +783,11 @@
       <div class="auth-split">
         <div class="auth-form-side">
           <h2 id="authTitle">Welcome back</h2>
-          <p class="auth-sub" id="authSub">
-            Log in to screen resumes and see your history.
-          </p>
-          <input
-            id="authEmail"
-            type="email"
-            placeholder="you@example.com"
-            autocomplete="email"
-          />
-          <input
-            id="authPassword"
-            type="password"
-            placeholder="Password"
-            autocomplete="current-password"
-          />
+          <p class="auth-sub" id="authSub">Log in to screen resumes and see your history.</p>
+          <input id="authEmail" type="email" placeholder="you@example.com" autocomplete="email" />
+          <input id="authPassword" type="password" placeholder="Password" autocomplete="current-password" />
           <div class="auth-error" id="authError"></div>
-          <button
-            type="button"
-            class="sticker-btn"
-            id="authSubmitBtn"
-            onclick="submitAuth()"
-          >
+          <button type="button" class="sticker-btn" id="authSubmitBtn" onclick="submitAuth()">
             <span id="authSubmitLabel">Log In</span>
           </button>
           <p class="auth-toggle">
@@ -883,14 +797,9 @@
         </div>
 
         <div class="auth-welcome-side">
-    
-          <h2 class="welcome-title">
-            Every resume,<br /><span class="accent">stacked &amp; ranked.</span>
-          </h2>
-          <p class="welcome-sub">
-            Drop in a stack of candidates and walk away with a ranked verdict on
-            every one.
-          </p>
+          <p class="script-tag">the</p>
+          <h2 class="welcome-title">Every resume,<br /><span class="accent">stacked &amp; ranked.</span></h2>
+          <p class="welcome-sub">Drop in a stack of candidates and walk away with a ranked verdict on every one.</p>
 
           <div class="file-stack">
             <div class="stack-item">resume_amir.pdf</div>
@@ -915,134 +824,85 @@
     <div id="appContent" class="hidden">
       <div class="user-bar">
         <span class="email" id="userEmail"></span>
-        <button type="button" onclick="toggleHistory()" id="historyToggleBtn">
-          View History
-        </button>
         <button type="button" onclick="signOut()">Log Out</button>
       </div>
 
-      <div id="historyPanel" class="board hidden" style="margin-bottom: 2rem">
+      <div id="historyPanel" class="board hidden" style="margin-bottom: 2rem;">
         <div id="historyList"></div>
-        <div id="historyEmpty" class="empty-card hidden">
-          <p>No past screenings yet.</p>
-        </div>
+        <div id="historyEmpty" class="empty-card hidden"><p>No past screenings yet.</p></div>
       </div>
 
-      <div class="board">
-        <header class="board-header">
-          <svg class="badge-ring" viewBox="0 0 100 100">
-            <path
-              id="ringPath"
-              d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"
-              fill="none"
-            />
-            <text>
-              <textPath href="#ringPath" startOffset="0%">
-                SCREENING DESK • AI-ASSISTED •
-              </textPath>
-            </text>
-            <circle class="dot" cx="50" cy="12" r="2.4" />
+    <div class="board">
+      <header class="board-header">
+        <svg class="badge-ring" viewBox="0 0 100 100">
+          <path id="ringPath" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" fill="none" />
+          <text>
+            <textPath href="#ringPath" startOffset="0%">SCREENING DESK • AI-ASSISTED •</textPath>
+          </text>
+          <circle class="dot" cx="50" cy="12" r="2.4" />
+        </svg>
+        <p class="script-tag">the</p>
+        <h1 class="big-title">RESUME<br /><span class="accent">SCREENER</span></h1>
+        <p class="tagline">Paste the brief, drop the stack, get a ranked verdict on every candidate.</p>
+      </header>
+
+      <div class="workspace">
+        <div class="card intake-card">
+          <div class="tape torn-top" style="height:34px;"></div>
+
+          <label class="field-label" for="jd">Job Description</label>
+          <textarea id="jd" required rows="6" placeholder="Paste the job requirements here..."></textarea>
+
+          <label class="field-label" for="resumes">Upload Resumes <span class="field-hint">PDF · DOCX · TXT</span></label>
+          <label class="file-drop" id="dropzone" for="resumes">
+            <span class="clip">📎</span><span id="fileText">Click or drop resumes here</span>
+            <input id="resumes" type="file" multiple required accept=".pdf,.docx,.txt" />
+          </label>
+
+          <button type="button" id="submitBtn" onclick="analyzeResumes()" class="sticker-btn">
+            <span>Analyze Resumes</span>
+          </button>
+        </div>
+
+        <div class="side-notes">
+          <div class="note n1">
+            <strong>How it works</strong>
+            Every resume is read locally, scored against your brief, and ranked so the strongest match lands on top.
+          </div>
+          <svg class="doodle-arrow" viewBox="0 0 100 60" fill="none" stroke="var(--linen)" stroke-width="2.5" stroke-linecap="round">
+            <path d="M10 10 C 40 10, 30 45, 70 40" />
+            <path d="M58 32 L 70 40 L 60 50" />
           </svg>
-          <p class="script-tag">the</p>
-          <h1 class="big-title">
-            RESUME<br /><span class="accent">SCREENER</span>
-          </h1>
-          <p class="tagline">
-            Paste the brief, drop the stack, get a ranked verdict on every
-            candidate.
-          </p>
-        </header>
-
-        <div class="workspace">
-          <div class="card intake-card">
-            <div class="tape torn-top" style="height: 34px"></div>
-
-            <label class="field-label" for="jd">Job Description</label>
-            <textarea
-              id="jd"
-              required
-              rows="6"
-              placeholder="Paste the job requirements here..."
-            ></textarea>
-
-            <label class="field-label" for="resumes"
-              >Upload Resumes
-              <span class="field-hint">PDF · DOCX · TXT</span></label
-            >
-            <label class="file-drop" id="dropzone" for="resumes">
-              <span class="clip">📎</span
-              ><span id="fileText">Click or drop resumes here</span>
-              <input
-                id="resumes"
-                type="file"
-                multiple
-                required
-                accept=".pdf,.docx,.txt"
-              />
-            </label>
-
-            <button
-              type="button"
-              id="submitBtn"
-              onclick="analyzeResumes()"
-              class="sticker-btn"
-            >
-              <span>Analyze Resumes</span>
-            </button>
+          <div class="note n2">
+            <strong>Tip</strong>
+            The more specific the brief — required skills, years of experience — the sharper the ranking.
           </div>
+          <button type="button" class="history-btn" onclick="toggleHistory()" id="historyToggleBtn">View History</button>
+        </div>
+      </div>
 
-          <div class="side-notes">
-            <div class="note n1">
-              <strong>How it works</strong>
-              Every resume is read locally, scored against your brief, and
-              ranked so the strongest match lands on top.
-            </div>
-            <svg
-              class="doodle-arrow"
-              viewBox="0 0 100 60"
-              fill="none"
-              stroke="var(--linen)"
-              stroke-width="2.5"
-              stroke-linecap="round"
-            >
-              <path d="M10 10 C 40 10, 30 45, 70 40" />
-              <path d="M58 32 L 70 40 L 60 50" />
-            </svg>
-            <div class="note n2">
-              <strong>Tip</strong>
-              The more specific the brief — required skills, years of experience
-              — the sharper the ranking.
-            </div>
-          </div>
+      <section class="results-wall">
+        <div id="loading" class="loading-card hidden">
+          <div class="spinner"></div>
+          <p><strong>Llama 3 is reviewing your candidates…</strong></p>
+          <p class="loading-sub">This can take a minute depending on your machine.</p>
         </div>
 
-        <section class="results-wall">
-          <div id="loading" class="loading-card hidden">
-            <div class="spinner"></div>
-            <p><strong>Llama 3 is reviewing your candidates…</strong></p>
-            <p class="loading-sub">
-              This can take a minute depending on your machine.
-            </p>
-          </div>
+        <div id="emptyState" class="empty-card">
+          <p>No evaluations yet. Fill out the form to screen resumes.</p>
+        </div>
 
-          <div id="emptyState" class="empty-card">
-            <p>No evaluations yet. Fill out the form to screen resumes.</p>
-          </div>
-
-          <div id="resultsContainer" class="hidden">
-            <h2 class="results-heading">
-              Ranked Results —
-              <span class="count" id="resultCount">0</span> candidate(s)
-            </h2>
-            <div id="resultsList"></div>
-          </div>
-        </section>
-      </div>
+        <div id="resultsContainer" class="hidden">
+          <h2 class="results-heading">Ranked Results — <span class="count" id="resultCount">0</span> candidate(s)</h2>
+          <div id="resultsList"></div>
+        </div>
+      </section>
     </div>
-    <!-- /#appContent -->
+    </div><!-- /#appContent -->
 
     <script>
-      const BACKEND_URL = "https://resume-parser-onfy.onrender.com";
+      // TODO: replace with your actual Render/Railway backend URL
+      const BACKEND_URL = "https://YOUR-BACKEND-URL.onrender.com";
 
       let authMode = "login"; // or "signup"
 
@@ -1057,9 +917,7 @@
         document.getElementById("authSubmitLabel").textContent =
           authMode === "login" ? "Log In" : "Sign Up";
         document.getElementById("authToggleText").textContent =
-          authMode === "login"
-            ? "Don't have an account?"
-            : "Already have an account?";
+          authMode === "login" ? "Don't have an account?" : "Already have an account?";
         document.getElementById("authToggleLink").textContent =
           authMode === "login" ? "Sign up" : "Log in";
         document.getElementById("authError").textContent = "";
@@ -1080,8 +938,7 @@
 
         btn.disabled = true;
         try {
-          const endpoint =
-            authMode === "login" ? "/auth/login" : "/auth/signup";
+          const endpoint = authMode === "login" ? "/auth/login" : "/auth/signup";
           const res = await fetch(`${BACKEND_URL}${endpoint}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -1162,13 +1019,11 @@
         const isHidden = panel.classList.contains("hidden");
         if (isHidden) {
           panel.classList.remove("hidden");
-          document.getElementById("historyToggleBtn").textContent =
-            "Hide History";
+          document.getElementById("historyToggleBtn").textContent = "Hide History";
           if (!historyLoaded) await loadHistory();
         } else {
           panel.classList.add("hidden");
-          document.getElementById("historyToggleBtn").textContent =
-            "View History";
+          document.getElementById("historyToggleBtn").textContent = "View History";
         }
       }
 
@@ -1229,13 +1084,9 @@
           fileText.textContent = "Click or drop resumes here";
           return;
         }
-        const names = Array.from(files)
-          .map((f) => f.name)
-          .join(", ");
+        const names = Array.from(files).map((f) => f.name).join(", ");
         fileText.textContent =
-          files.length === 1
-            ? `1 file — ${names}`
-            : `${files.length} files — ${names}`;
+          files.length === 1 ? `1 file — ${names}` : `${files.length} files — ${names}`;
       }
       fileInput.addEventListener("change", updateFileText);
       ["dragenter", "dragover"].forEach((evt) =>
@@ -1341,18 +1192,12 @@
 
         results.forEach((res, i) => {
           const vClass = verdictClass(res.verdict);
-          const matched =
-            res.matched_skills && res.matched_skills.length
-              ? res.matched_skills
-                  .map((s) => `<span class="chip match">${s}</span>`)
-                  .join("")
-              : '<span class="chip none">None detected</span>';
-          const missing =
-            res.missing_skills && res.missing_skills.length
-              ? res.missing_skills
-                  .map((s) => `<span class="chip miss">${s}</span>`)
-                  .join("")
-              : '<span class="chip none">None detected</span>';
+          const matched = res.matched_skills && res.matched_skills.length
+            ? res.matched_skills.map((s) => `<span class="chip match">${s}</span>`).join("")
+            : '<span class="chip none">None detected</span>';
+          const missing = res.missing_skills && res.missing_skills.length
+            ? res.missing_skills.map((s) => `<span class="chip miss">${s}</span>`).join("")
+            : '<span class="chip none">None detected</span>';
 
           const card = document.createElement("div");
           card.className = "result-card";
