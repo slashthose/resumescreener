@@ -225,10 +225,19 @@ There's no `.env` on the frontend since it's a static file with no build step �
 ## Screenshots
 
 
-**Split-screen Login** — `![Login](./screenshots/login.png)`
-**Job Description & Upload** — `![Upload Form](./screenshots/upload-form.png)`
-**Ranked Results** — `![Ranked Results](./screenshots/results.png)`
-**Screening History** — `![History](./screenshots/history.png)`
+**Split-screen Login** ![Login](./screenshots/login.png)
+
+---
+
+**Job Description & Upload** ![Upload Form](./screenshots/landing_page.png)
+
+---
+
+**Ranked Results**  ![Ranked Results](./screenshots/ranked_results.png)
+
+---
+
+**Screening History** ![History](./screenshots/history.png)
 
 ---
 
