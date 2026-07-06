@@ -827,11 +827,6 @@
         <button type="button" onclick="signOut()">Log Out</button>
       </div>
 
-      <div id="historyPanel" class="board hidden" style="margin-bottom: 2rem;">
-        <div id="historyList"></div>
-        <div id="historyEmpty" class="empty-card hidden"><p>No past screenings yet.</p></div>
-      </div>
-
     <div class="board">
       <header class="board-header">
         <svg class="badge-ring" viewBox="0 0 100 100">
@@ -881,6 +876,11 @@
         </div>
       </div>
 
+      <div id="historyPanel" class="board hidden" style="margin-bottom: 2rem;">
+        <div id="historyList"></div>
+        <div id="historyEmpty" class="empty-card hidden"><p>No past screenings yet.</p></div>
+      </div>
+
       <section class="results-wall">
         <div id="loading" class="loading-card hidden">
           <div class="spinner"></div>
@@ -901,8 +901,8 @@
     </div><!-- /#appContent -->
 
     <script>
-      
-      const BACKEND_URL = "https://resume-parser-onfy.onrender.com";
+      // TODO: replace with your actual Render/Railway backend URL
+      const BACKEND_URL = "https://YOUR-BACKEND-URL.onrender.com";
 
       let authMode = "login"; // or "signup"
 
