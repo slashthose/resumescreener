@@ -1,6 +1,6 @@
 import os
+import bcrypt
 from datetime import datetime, timedelta, timezone
-from passlib.context import CryptContext
 from jose import jwt, JWTError
 from fastapi import Header, HTTPException, status
 
@@ -8,15 +8,17 @@ JWT_SECRET_KEY = os.environ["JWT_SECRET_KEY"]
 JWT_ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_HOURS = 24 * 7  # 1 week
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
 
 def hash_password(password: str) -> str:
-    return pwd_context.hash(password)
+    # bcrypt has a hard 72-byte limit on the input -- truncate defensively
+    # so unusually long passwords don't raise instead of just hashing.
+    password_bytes = password.encode("utf-8")[:72]
+    return bcrypt.hashpw(password_bytes, bcrypt.gensalt()).decode("utf-8")
 
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
-    return pwd_context.verify(plain_password, hashed_password)
+    password_bytes = plain_password.encode("utf-8")[:72]
+    return bcrypt.checkpw(password_bytes, hashed_password.encode("utf-8"))
 
 
 def create_access_token(user_id: str, email: str) -> str:
